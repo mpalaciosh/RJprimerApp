@@ -1,15 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import { MiModulo1 } from './miModulo';
 import NavBar from './components/NavBar';
+import Lista from './components/ItemListContainer';
 
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
+      <Lista/>  
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Bienvenido a la App de Maria Palacios
         </p>
