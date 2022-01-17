@@ -19,6 +19,8 @@ function Lista(){
         <Categorias mytext="Niños"/> 
         <Categorias mytext="Niñas"/> 
         <Categorias mytext="Accesorios"/>
+        <Categorias mytext="Materno"/>
+
         </div>
     );
 }

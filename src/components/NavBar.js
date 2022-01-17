@@ -2,6 +2,7 @@ import "./estilos.css";
 import Logokd from './CartWidget';
 
 
+
 function NavBar(){
     return (
     <nav> <h1>C & E Kids Store</h1> 
