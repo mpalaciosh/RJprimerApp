@@ -16,7 +16,7 @@ function ItemCount (){
     if(count>=0 && count<=stock){
         return( 
             <div className="boxContador">
-                <p>Producto</p>
+                <h3>Producto</h3>
                 <div>
                     <buttom onClick={descontar} className="botContar">-</buttom>
                     <a>{count}</a>
