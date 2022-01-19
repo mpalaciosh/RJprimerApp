@@ -15,15 +15,54 @@
     padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
+    color: blanchedalmond;
   }
 a{
     color:white;
 }
 .logok{
   height: 70px;
+  padding-bottom:10px;
 }
 
 .lista{
   border: 1px solid black;
 
+}
+nav{
+  background-color: darkcyan;
+}
+.carticon{
+ color:darkred;
+font-size: 40px;
+}
+
+.boxContador{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  margin-bottom: 1%;  
+  padding: 5px;
+  background-color: rgb(28, 70, 83);
+  color:rgb(17, 17, 17);
+  margin-right: 20%;
+  position: absolute;
+  width: 350px;
+  height: 150px;
+}
+
+.botContar{
+  height: 30px;
+    background-color: black;
+    font-size: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: darkturquoise;
+    margin-left: 20px;
+    margin-right: 20px;
 }

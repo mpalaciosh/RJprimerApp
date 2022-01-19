@@ -2,6 +2,7 @@ import './App.css';
 import { MiModulo1 } from './miModulo';
 import NavBar from './components/NavBar';
 import Lista from './components/ItemListContainer';
+import ItemCount from './components/ItemCount';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <NavBar/>
       <Lista/>  
-      <header className="App-header">
+      <ItemCount count='0' initial='0'stock='10' />
+     <header className="App-header">
         <p>
           Bienvenido a la App de Maria Palacios
         </p>
