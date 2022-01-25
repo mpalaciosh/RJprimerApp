@@ -42,15 +42,13 @@ font-size: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 20%;
-  margin-right: 20%;
   text-align: center;
   margin-bottom: 1%;  
   padding: 5px;
   background-color: rgb(28, 70, 83);
   color:rgb(17, 17, 17);
   margin-right: 20%;
-  position: absolute;
+ 
   width: 350px;
   height: 150px;
 }
@@ -65,4 +63,12 @@ font-size: 40px;
     color: darkturquoise;
     margin-left: 20px;
     margin-right: 20px;
+}
+.boxItem{
+  border: 1px solid red;
+  width: 200px;
+  margin-left: 500px;
+}
+.fotProduct{
+  height: 150px;
 }

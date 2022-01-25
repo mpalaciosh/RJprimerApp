@@ -3,6 +3,9 @@ import { MiModulo1 } from './miModulo';
 import NavBar from './components/NavBar';
 import Lista from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
+import MostrarProducto from './components/ItemList';
+
+
 
 
 function App() {
@@ -11,6 +14,7 @@ function App() {
       <NavBar/>
       <Lista/>  
       <ItemCount count='0' initial='0'stock='10' />
+      <MostrarProducto/>
      <header className="App-header">
         <p>
           Bienvenido a la App de Maria Palacios
