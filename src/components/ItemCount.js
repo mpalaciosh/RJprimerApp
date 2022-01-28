@@ -1,32 +1,31 @@
-import React from "react";
+import { useState } from "react";
 import "./estilos.css";
 
 function ItemCount (){
-    const [count, setCount]= React.useState(0);
+    const [cont, setCont]= useState(0);
     const stock =10;
+
     const contar = ()=>{
-        count>=0? setCount(count+1): setCount(count);
-        //setCount (count +1)
+        cont>=0? setCont(cont+1): setCont(cont);
     };
     const descontar=()=>{
-        count<=0? setCount(count): setCount(count-1);
-        //setCount (count -1)
+        cont<=0? setCont(cont): setCont(cont-1);
     };
 
-    if(count>=0 && count<=stock){
+    if(cont>=0 && cont<=stock){
         return( 
             <div className="boxContador">
                 <h3>Producto</h3>
                 <div>
-                    <buttom onClick={descontar} className="botContar">-</buttom>
-                    <a>{count}</a>
-                    <buttom onClick={contar} className="botContar">+</buttom>
+                    <button onClick={descontar} className="botContar">-</button>
+                    <a>{cont}</a>
+                    <button onClick={contar} className="botContar">+</button>
                 </div>
-                <buttom className="boxNavegador" >Agregar Producto</buttom>
+                <button className="boxNavegador" >Agregar Producto</button>
             </div> 
             );
     } else {//alert("error de stock");
-        count = count-1
+        cont = cont-1
 }
 }
 

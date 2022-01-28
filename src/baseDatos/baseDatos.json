@@ -1,0 +1,48 @@
+{"PRODUCTOS" :[
+    {
+    "id":0,
+    "imag": "https://picsum.photos/200",
+        "nombre":"Vestido Peppa", 
+    "descripcion":"vestido azul y tul",
+    "talla": "S - M - L",
+    "precio":60, 
+    "stock":10
+    },
+    {
+    "id":1,
+    "imag": "https://picsum.photos/201",
+    "nombre":"Vestido Kitty", 
+    "descripcion":"vestido rosa",
+    "talla": "Standard",
+    "precio":60, 
+    "stock":8
+    },
+    {
+    "id":2,
+    "imag": "https://picsum.photos/202",
+    "nombre":"Conjunto Coral", 
+    "descripcion":"Conjunto 3 piezas",
+    "talla": "S - M - L",
+    "precio":80, 
+    "stock":18
+    },
+    {
+        "id":3,
+        "imag": "https://picsum.photos/203",
+        "nombre":"Conjunto Cara Minie", 
+        "descripcion":"tela super fresca",
+        "talla": "Standard",
+        "precio":55,  
+        "stock":6
+    },
+    {
+        "id":4,
+        "imag": "https://picsum.photos/204",
+        "nombre":"Conjunto Minie Azul", 
+        "descripcion":"Manga larga",
+        "talla": "S - M - L",
+        "precio":60, 
+        "stock":15
+    }
+  ]
+}

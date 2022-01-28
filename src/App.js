@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Lista from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 import MostrarProducto from './components/ItemList';
+import DetailProducto from './components/ItemDetailContainer';
 
 
 
@@ -14,19 +15,15 @@ function App() {
       <NavBar/>
       <Lista/>  
       <ItemCount count='0' initial='0'stock='10' />
-      <MostrarProducto/>
+     
      <header className="App-header">
         <p>
           Bienvenido a la App de Maria Palacios
+          <MostrarProducto/>
+          <br></br>
+          <DetailProducto/>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
       </header>
       <MiModulo1/>  
     </div>

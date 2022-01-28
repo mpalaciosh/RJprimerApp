@@ -1,15 +1,17 @@
+
 import { useEffect, useState} from "react";
 import "./estilos.css";
-import Item from "./Item.js";
+import Detail from "./ItemDetail";
+import { getItem } from "./promesa";
 
 const URL = "http://localhost:3001/PRODUCTOS";
-function MostrarProducto() {
+function DetailProducto() {
   const [productos, setProductos] = useState([]);
   const[isLoading, setIsloading]=useState(false);
   const[error, setError] =useState(null);
   useEffect(() => {
     
-      setIsloading(true);
+    setIsloading(true);
     fetch(URL)
     .then((respuesta)=> respuesta.json())
     .then((json) => setProductos(json))
@@ -25,9 +27,9 @@ function MostrarProducto() {
   return(
     <div className="boxProductos">
         {productos.map((produ) => (
-        <Item key={produ.id} product={produ} />
+        <Detail key={produ.id} product={produ} />
       ))}
     </div>
   );
 }
-export default MostrarProducto;
+export default DetailProducto;
