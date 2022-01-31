@@ -1,16 +1,28 @@
-import "./estilos.css";
+import "../css/estilos.css";
+import { Link } from "react-router-dom";
 import Logokd from './CartWidget';
-import CartIcon from './icons/CartIcon';
-
+import CartIcon from '../imagenes/icons/CartIcon';
+import { useNavigate } from "react-router-dom";
 
 function NavBar(){
+
+    let navigate = useNavigate();
+    const goToHome=()=>{
+        navigate("/");
+    };
     return (
-    <nav> <h1>C & E Kids Store</h1> 
+    <nav> <h1 onClick={goToHome}>C & E Kids Store</h1> 
             <div className="navegador">
                 <Logokd/>
-                <a className="boxNavegador" href="index.html">INICIO</a>
-                <a className="boxNavegador" href="">NOSOTROS</a> 
-                <a className="boxNavegador" href="">PRODUCTOS</a> 
+                <a className="boxNavegador">
+                    <Link to="/">INICIO</Link>
+                </a>
+                <a className="boxNavegador">
+                    <Link to="/nosotros">NOSOTROS</Link>
+                </a> 
+                <a className="boxNavegador">
+                    <Link to="/productos">PRODUCTOS</Link>
+                </a>
                 <CartIcon/>
             </div>
     </nav>

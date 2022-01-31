@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./estilos.css";
+import "../css/estilos.css";
 
 function ItemCount (){
     const [cont, setCont]= useState(0);
@@ -15,13 +15,12 @@ function ItemCount (){
     if(cont>=0 && cont<=stock){
         return( 
             <div className="boxContador">
-                <h3>Producto</h3>
                 <div>
                     <button onClick={descontar} className="botContar">-</button>
                     <a>{cont}</a>
                     <button onClick={contar} className="botContar">+</button>
                 </div>
-                <button className="boxNavegador" >Agregar Producto</button>
+                <button  >Agregar Producto</button>
             </div> 
             );
     } else {//alert("error de stock");

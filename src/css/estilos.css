@@ -1,0 +1,130 @@
+*{margin: 0;
+padding: 0;}
+.cajaGigante {
+  height: 1000px;
+  font-size: 30px;
+
+}
+
+.body{
+  background-color: #282c34;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.navegador{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+  
+    text-align: center;
+    margin-bottom: 0;  
+  }
+
+  a{
+    text-decoration: none;
+    color:white;
+  }
+  h1{
+    text-align: center;
+    font-size: 45px;
+    color: rgb(212, 179, 171);
+    font-family:cursive;
+    font-kerning: initial;
+  }
+  .boxNavegador{
+    margin-top: 20px;
+    height: 20px;
+    background-color: black;
+    font-size: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: blanchedalmond;
+  }
+
+
+.logok{
+  height: 70px;
+  padding-bottom:10px;
+}
+
+.lista{
+  border: 1px solid rgb(245, 238, 238);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 150px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+nav{
+  background-color: darkcyan;
+}
+.carticon{
+ color:darkred;
+font-size: 40px;
+margin-top: 20px;
+}
+
+.boxContador{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(28, 70, 83);
+  color:rgb(17, 17, 17);
+  width: 400px;
+  height: 60px;
+  border: 1px solid rgb(28, 70, 83);
+}
+
+.botContar{
+  height: 30px;
+    background-color: black;
+    font-size: 18px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: darkturquoise;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fotProduct{
+  height: 150px;
+}
+.boxProductos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.boxItem{
+  border: 1px solid red;
+  text-align: center;
+  width: 20%;
+  height: 30%;
+  padding: 10px;
+  font-size: 15px;
+}
+.boxDetalle{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(25, 0, 255);
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.found{
+  color: rgb(248, 238, 238);
+  font-size: 30px;
+  text-decoration:underline;
+}

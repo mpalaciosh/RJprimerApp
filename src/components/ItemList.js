@@ -1,5 +1,5 @@
 import { useEffect, useState} from "react";
-import "./estilos.css";
+import "../css/estilos.css";
 import Item from "./Item.js";
 
 const URL = "http://localhost:3001/PRODUCTOS";
