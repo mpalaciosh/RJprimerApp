@@ -9,8 +9,11 @@ const NosotrosPage =()=>{
             <h1>NosotrosPage</h1>
             <Link className="found" to="/nosotros/vision">Vision</Link> <br />
             
-            <Link className="found" to="/nosotros/mision">Mision</Link>
+            <Link className="found" to="/nosotros/mision">Mision</Link> <br />
+            <Link className="found" to="/nosotros/login">Ingresar</Link>
             <Outlet/>
+            
+            
             </div>
         </div>
     );

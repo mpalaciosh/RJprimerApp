@@ -2,6 +2,12 @@ import "../css/estilos.css";
 import ItemCount from "./ItemCount";
 import { useNavigate } from "react-router-dom";
 
+
+/*
+onAdd(quantityToAdd) {
+    // Hemos recibido un evento del ItemCount
+    }*/
+
 const Detail =({product})=>{
 
     let navigate = useNavigate();
@@ -9,7 +15,7 @@ const Detail =({product})=>{
         navigate("/productos");
     };
     return(
-        <div>
+        <div>       
         <div className="boxDetalle">
             <img className="fotProduct" src={product.imag} alt={product.nombre}/>
             <div>
@@ -20,7 +26,10 @@ const Detail =({product})=>{
             <p>Stock: {product.stock}</p>
             </div> 
         </div>
-        <ItemCount count='0' initial='0'stock='10' />
+        <div className="boxContador">  
+        <ItemCount stock={product.stock} />
+        <button  >Agregar Producto</button>
+        </div>
         <button onClick={goToProductos}>Regresar a Productos</button>
         </div>
     );

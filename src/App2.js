@@ -9,6 +9,8 @@ import MisionPage from './pages/MisionPage';
 import ProducDetailPage from './pages/ProducDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
 import CategoriasPage from './pages/CategoriasPage';
+import LoginPage from './pages/LoginPage';
+
 
 
 
@@ -20,11 +22,13 @@ return (
       <Route path="/">
         <Route index element={<HomePage />} />
         <Route path=":CategoriaId" element={<CategoriasPage />} />
-        
+       
+        <Route path="login" element={<LoginPage />}/>
 
         <Route path="nosotros" element={<NosotrosPage />}>
           <Route path="vision" element={<VisionPage />} />
           <Route path="mision" element={<MisionPage />} />
+          <Route path="login" element={<LoginPage/>} />
         </Route>
 
         <Route path="productos">

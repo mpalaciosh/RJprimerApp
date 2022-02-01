@@ -77,7 +77,7 @@ margin-top: 20px;
   text-align: center;
   background-color: rgb(28, 70, 83);
   color:rgb(17, 17, 17);
-  width: 400px;
+  width: 450px;
   height: 60px;
   border: 1px solid rgb(28, 70, 83);
 }
@@ -118,7 +118,7 @@ margin-top: 20px;
   display: flex;
   flex-direction: row;
   border: 1px solid rgb(25, 0, 255);
-  width: 400px;
+  width: 450px;
   justify-content: space-between;
   align-items: center;
 
