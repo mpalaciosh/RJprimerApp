@@ -1,50 +1,25 @@
-
-
-
-
-
+import {  useUsuario } from "../context/UserContext";
 
 const LoginPage=()=>{
-    //no permite escribir vocales
-    const handLeKeyDown=(event)=>{
-        if(
-            event.key ==="a" ||
-            event.key ==="e" ||
-            event.key ==="i" ||
-            event.key ==="o" ||
-            event.key ==="u" 
-    
-        ){
-            event.preventDefault();
-        }
-    };
-    
-///------
+    const {data,isLoading, error, cambiarNombre}= useUsuario();
+    if(isLoading){
+        return <p>Cargando......</p>
+    }else if(error){
+        return <p>Ha habido un error</p>
+    }else
 
-    const handLeSubmit =(evt)=>{
-        evt.preventDefault();
-                console.log({
-                    [evt.target[0].name]: evt.target[0].value,
-                    [evt.target[1].name]: evt.target[1].value,
-    });
-}
-    
     return(
         <div>
             <h1>Login Page</h1>
 
-            <form onSubmit={handLeSubmit}>
-                <label htmlFor="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre"/> <br />
-                <label htmlFor="age">Edad</label>
-                <input type="number" name="age" id="age"/> <br />
-                <input type="submit" value="Enviar" />
-
-
-                <input type="text" placeholder="Escribir aqui" onKeyDown={handLeKeyDown} />
-            </form>
-            </div>
+            <p>Nombre: {data.name}</p>
+            <p>Email: {data.email}</p>
+            <img scr={data.foto} alt={data.name}/>   <br /><br />   
+            <button onClick={cambiarNombre}> Cambiar Nombre</button>           
+        </div>
     );
-};
+}
+    export default LoginPage
 
-export default LoginPage
+
+  //<img scr={require('../../public/imagenes/usuarios/'+ data.foto)} alt={data.name}/>   

@@ -10,6 +10,8 @@ const HomePage =()=>{
     const goToProductos=()=>{
         navigate("/productos");
     };
+    
+
     return(
         <div className="body">
             <div className="cajaGigante">
@@ -26,3 +28,5 @@ const HomePage =()=>{
 
 
 export default HomePage
+
+

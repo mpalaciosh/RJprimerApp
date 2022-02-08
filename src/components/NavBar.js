@@ -23,6 +23,7 @@ function NavBar(){
                 <a className="boxNavegador">
                     <Link to="/productos">PRODUCTOS</Link>
                 </a>
+
                 <CartIcon/>
             </div>
     </nav>

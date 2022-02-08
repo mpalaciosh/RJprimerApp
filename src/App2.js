@@ -10,19 +10,22 @@ import ProducDetailPage from './pages/ProducDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
 import CategoriasPage from './pages/CategoriasPage';
 import LoginPage from './pages/LoginPage';
-
-
+import {UserProvider } from './context/UserContext';
+import { CartProvider } from './context/CartContext';
+import CarritoPage from './pages/CarritoPage';
 
 
 function App2(){
 return (
+ <UserProvider>
+   <CartProvider>
   <BrowserRouter>
     <NavBar />
     <Routes>
       <Route path="/">
         <Route index element={<HomePage />} />
-        <Route path=":CategoriaId" element={<CategoriasPage />} />
-       
+        <Route path=":CategoriaId" element={<CategoriasPage />} />    
+          
         <Route path="login" element={<LoginPage />}/>
 
         <Route path="nosotros" element={<NosotrosPage />}>
@@ -35,10 +38,13 @@ return (
           <Route index element={<ProductPage />} />
           <Route path=":productId" element={<ProducDetailPage />} />
         </Route>
+        <Route path="carrito" element={<CarritoPage />} /> 
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   </BrowserRouter>
+  </CartProvider>
+  </UserProvider>
 );
 }
 

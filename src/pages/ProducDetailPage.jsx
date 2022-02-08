@@ -22,10 +22,10 @@ const ProducDetailPage =()=>{
     return (
         <div>
             <h1>Este es el detalle del producto num : {productId}</h1>
-            <Detail key={producto.id} product={producto} />
+            <Detail key={producto.id} product={producto} />    
         </div>
-    );
-    
+        
+    );   
 };
 
 export default ProducDetailPage

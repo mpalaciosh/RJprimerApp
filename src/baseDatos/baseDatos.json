@@ -1,8 +1,8 @@
 {"PRODUCTOS" :[
     {
     "id":0,
-    "imag": "https://scontent.flim1-2.fna.fbcdn.net/v/t45.5328-4/p960x960/158177823_4095772180442452_2428484690645174987_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=c48759&_nc_eui2=AeEVyrZHVCVYokyyW64-ZE68k_-HLkBxyceT_4cuQHHJx7NLnpPqNEh-5dX-eHEapbM&_nc_ohc=NgCdpDFY7GEAX_zyqco&_nc_ht=scontent.flim1-2.fna&oh=00_AT-ryC1curxwYOWkgqjW653VxXNXZ8062mC5ll8wSWOg-Q&oe=61FC9CB2",
-        "nombre":"Vestido Peppa", 
+    "imag": "vestidoPeppa.jpg",
+    "nombre":"Vestido Peppa", 
     "descripcion":"vestido azul y tul",
     "talla": "S - M - L",
     "precio":60, 
@@ -11,7 +11,7 @@
     },
     {
     "id":1,
-    "imag": "https://home.ripley.com.pe/Attachment/WOP_5/2093261139563/2093261139563_2.jpg",
+    "imag": "VestidoKity.jpg",
     "nombre":"Vestido Kitty", 
     "descripcion":"vestido rosa",
     "talla": "Standard",
@@ -21,7 +21,7 @@
     },
     {
     "id":2,
-    "imag": "https://scontent.flim1-1.fna.fbcdn.net/v/t45.5328-4/p960x960/158264847_3944351342297132_2365276808877686089_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=c48759&_nc_eui2=AeEhAvUYprlr0Z2LiBQBwYgxTXYUcwuD-BlNdhRzC4P4GczePKIJPcPp0ZljW16Z3Fk&_nc_ohc=G5yGwvFTDicAX_ETa4t&tn=B1JGO8SWu3PvrHvG&_nc_ht=scontent.flim1-1.fna&oh=00_AT9bH0pFutQ1ClQYfDSZIEzPJu88xvsfD2L4eHr7264Rjg&oe=61FBA0E5",
+    "imag": "conjuntocoral.jpg",
     "nombre":"Conjunto Coral", 
     "descripcion":"Conjunto 3 piezas",
     "talla": "S - M - L",
@@ -31,7 +31,7 @@
     },
     {
         "id":3,
-        "imag": "https://scontent.flim1-1.fna.fbcdn.net/v/t45.5328-4/p960x960/158405167_5264674463572483_1521347648173796730_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=c48759&_nc_eui2=AeGvHDM9ycYJBSF74l7q008Zr97fq1iudyqv3t-rWK53Ks2g4-8hPiVooLEAlat8bPk&_nc_ohc=AP5RmerqHEkAX-LYjvr&_nc_ht=scontent.flim1-1.fna&oh=00_AT9h54EKcWaeC2Wsc1if-TsQM1ymaxR_aCMdr2IF7Wkipg&oe=61FBD1AF",
+        "imag": "minicorta.jpg",
         "nombre":"Conjunto Cara Minie", 
         "descripcion":"tela super fresca",
         "talla": "Standard",
@@ -41,7 +41,7 @@
     },
     {
         "id":4,
-        "imag": "https://scontent.flim1-1.fna.fbcdn.net/v/t45.5328-4/p960x960/158124341_3937115893015542_4439329891070795611_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=c48759&_nc_eui2=AeEfYWK2Dx20NHiRlS8Sq5T-X_9npGKL9VFf_2ekYov1UfJkpd1Q4ygA5O-o3vP4-qE&_nc_ohc=-HkDRUl3erIAX-XG7dF&_nc_ht=scontent.flim1-1.fna&oh=00_AT-fGsFPXZQOdMah1hlPV0-9veWBweHmulWmlF4s1EwR0w&oe=61FB4C93",
+        "imag": "minilarga.jpg",
         "nombre":"Conjunto Minie Azul", 
         "descripcion":"Manga larga",
         "talla": "12 meses, 18 meses",
@@ -51,7 +51,7 @@
     },
     {
         "id":5,
-        "imag": "https://evidientemente.files.wordpress.com/2016/10/dedal-de-silicona.jpg",
+        "imag": "dedalSilicona.jpg",
         "nombre":"Cepillo Silicona", 
         "descripcion":"Cepillo dental de silicona, ideal para limpiar encillas y dientes del bebe sin latimar su encia",
         "talla": "Rojo - Azul - Negro",
@@ -61,7 +61,7 @@
     },
     {
         "id":6,
-        "imag": "https://cdnv2.moovin.com.br/cegonhaencantada/imagens/produtos/original/terno-preto-para-bebe-8351.jpg",
+        "imag": "ternoNegro.jpg",
         "nombre":"Terno moderno", 
         "descripcion":"Manga larga",
         "talla": "S - M - L",
@@ -71,7 +71,7 @@
     },
     {
         "id":7,
-        "imag": "https://th.bing.com/th/id/OIP.2EHhV7COFyQASpA14E002QHaHa?pid=ImgDet&rs=1",
+        "imag": "mochilapañalera.jpg",
         "nombre":"Mochila Pañalera", 
         "descripcion":"Gran capacidad y varios compartimientos independientes ",
         "talla": "S - M - L",
@@ -81,7 +81,7 @@
     },
     {
         "id":8,
-        "imag": "https://sc04.alicdn.com/kf/H8df4c90de94644ef82c711d91ed6205c9.jpg_Q55.jpg",
+        "imag": "poloLactancia.jpg",
         "nombre":"Polo de Lactancia", 
         "descripcion":"Lindo y moderno polo de lactacia, con abertura discreta ",
         "talla": "S - M - L",
@@ -91,7 +91,7 @@
     },
     {
         "id":9,
-        "imag": "http://s3.amazonaws.com/storage.wobiz.com/130/130010/images/Large/1609383006_30d2a056de0031ff5f51fc88ff2a1f6d.130010.jpeg",
+        "imag": "pantalonMaterno.jpeg",
         "nombre":"pantalon de maternidad", 
         "descripcion":"Comodo pantalon jean corte clasico, con la comodidad para la barriguita de mamá ",
         "talla": "S - M - L",
@@ -101,7 +101,7 @@
     },
     {
         "id":10,
-        "imag": "https://i.pinimg.com/originals/b9/2e/4c/b92e4cf18b22ebf55a51c5998990c66d.jpg",
+        "imag": "vestidoMaterno.jpg",
         "nombre":"Vestido maternidad", 
         "descripcion":"Hermoso vestido ideal para celebrar el BabyShower ",
         "talla": "S - M - L",
@@ -111,7 +111,7 @@
     },
     {
         "id":11,
-        "imag": "https://scontent.flim1-2.fna.fbcdn.net/v/t45.5328-4/p960x960/158978632_3952185038134987_6009689208401861958_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=c48759&_nc_eui2=AeF38WpBLxpeGI-4j4llRUWL2vhFOGsvr2za-EU4ay-vbAh8JYO2cYQt0NvAB2Z1RQ0&_nc_ohc=1a6eXwVfwIQAX-zLP9n&tn=B1JGO8SWu3PvrHvG&_nc_ht=scontent.flim1-2.fna&oh=00_AT9FRhXr8oxzwVwKUm1rDJH8twtspftXc2hsWjqQWen_GQ&oe=61FBF479",
+        "imag": "retenedorPuerta.png",
         "nombre":"Retenedor de Puerta", 
         "descripcion":"Protegue los dedos de tu bebe, con estos divertidos retendedores de puerta ",
         "talla": "diseños variados",
@@ -119,5 +119,27 @@
         "stock":15,
         "catId":3
     }
-  ]
+  ],
+  "CATEGORIAS":[
+    {"id":1,
+    "nombre":"Niños"
+    },
+    {"id":2,
+    "nombre":"Niñas"
+    },
+    {"id":3,
+    "nombre":"Accesorios"
+    },   
+    {"id":4,
+    "nombre":"Materno"
+    }
+  ],
+  "USER":
+      {
+      "name":"Maria",
+      "email":"maria.palaciosh@gmail.com",
+      "foto":"https:/picsum.photos/200"
+  }
+
+
 }

@@ -25,7 +25,7 @@ function MostrarProducto() {
   return(
     <div className="boxProductos">
         {productos.map((produ) => (
-        <Item key={produ.id} product={produ} />
+        <Item key={produ.id} producto={produ} />
       ))}
     </div>
   );
