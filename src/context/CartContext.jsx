@@ -8,23 +8,34 @@ export const CartProvider=({children})=>{
     const [cart, setCart]= useState([]);
         const addItem=(item, cantidad)=>{
 
-           // if(item.id==cart.map((item)).id){
-            const newItem={item, cantidad};
-            console.log('se agrego al carrito:', newItem)
-            setCart((prevState)=>[...prevState, newItem]);
-      //  }else{
-            //alert("Producto ya agregado");}
+           /*cart.forEach((p)=>{
+              if( p.item.id==item.id && item<=0){
+                alert("Producto ya agregado");
+                
+                }else{  */
+                    const totalProduct=(item.precio * cantidad); 
+                const newItem={item, cantidad, totalProduct};
+                 
+                 console.log('se agrego al carrito:', newItem)
+                     setCart((prevState)=>[...prevState, newItem]);
+                 //}
+              //} )       
         };
         const items=cart.length;
         const removeItem=(id)=>{
             setCart((prev)=> prev.filter((element)=> element.item.id !==id));
-        };
-        
+        };     
         const clearAll=()=>{
             setCart([]);
-
         };
-    return <CartContext.Provider value={{cart, addItem, removeItem, clearAll, items}}>
+        const totalPagar=(cart) =>{
+            let total = 0;
+            cart.forEach((p) => {
+                total += p.totalProduct;
+            });
+            return total;
+        }
+    return <CartContext.Provider value={{cart, addItem, removeItem, clearAll, items,totalPagar}}>
         {children}
     </CartContext.Provider>
 }

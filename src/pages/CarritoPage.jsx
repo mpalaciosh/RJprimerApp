@@ -1,37 +1,49 @@
 import { useCart } from "../context/CartContext";
 import * as React from "react";
-
-const totalPagar=0
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+//    const [totalPagar, setTotalPagar]= useState(0);
 const CarritoPage=()=>{
-    const {cart, removeItem, clearAll, items}=useCart();
-    
+
+    const {cart, removeItem, clearAll, items, totalPagar}=useCart();  
+    let navigate = useNavigate();
+    const goToProductos=()=>{
+        navigate("/productos");
+    };
+    if(items<=0){
+        return( 
+        <>
+        <div className="cajaGigante">
+            <p>Carrito de Compras</p>
+            <p> Aun no has escogido productos para comprar </p>
+            <button className="botonCarrito" onClick={goToProductos}>Ir a ver los Produtos</button><br />
+            </div>
+            </>
+        )
+    }else
     return(
-        <div>
-            <h1>Carrito Page</h1>
-            <h2>Cantidad de articulos en el carrito: {items} </h2>
-            
-            {cart.map((compra)=>{
-                const totalProduct=(compra.item.precio * compra.cantidad);
-                 //totalPagar((prev)=>prev+totalProduct);
-               
-                return(
-                <><div key={compra.item.id} className="boxCarrito">
-                        <img className="imagCarrito" src={require('../../public/imagenes/' + compra.item.imag)} />
+        <div className="cajaGigante">
+        <div className="padreCarrito"> 
+        <h1>Carrito de Compras</h1><br />
+        {cart.map((compra)=>{
+              
+            return(
+            <div key={compra.item.id} className="boxCarrito">
+                        
+                        <img className="imagCarrito" src={compra.item.imag} alt={compra.item.nombre}/>
                         <p>{compra.item.nombre}</p>
                         <p>{compra.cantidad}</p>
-                        <p>S/.{totalProduct}</p>
+                        <p>S/.{compra.totalProduct}</p>
                         <button onClick={() => removeItem(compra.item.id)}>Quitar producto</button>
-                    </div>
-                  </>
-                
-            )})}
-              <div>
-                    <p>Total a pagar S/.{totalPagar}</p>
-                    </div>
+                       
+            </div>
+            )
+        })}
+            <div> <p>Total a pagar S/.{totalPagar(cart)}</p> </div>
             <br/><br/><button onClick={clearAll}>Borrar todo</button>
+            <br/><br/><button className="botonCarrito">Terminar la Compra</button>
+            </div> 
         </div>
-    );
-
-};
-
+    )}
 export default CarritoPage;
+ //{setTotalPagar((prev)=>prev+totalProduct)  }

@@ -18,7 +18,7 @@ const HomePage =()=>{
             <h1>HomePage</h1>
             <Categorias/>
             <Outlet/>
-            <button onClick={goToProductos}>Ir a ver los Produtos</button> <br />
+            <button className="botonCarrito" onClick={goToProductos}>Ir a ver los Produtos</button> <br />
             <Link className="found" to="/login">Ingresar</Link>
             <Outlet/>
             </div>
