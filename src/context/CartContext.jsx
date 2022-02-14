@@ -6,24 +6,37 @@ CartContext.displayName = "CartContext";
 export const CartProvider=({children})=>{
 
     const [cart, setCart]= useState([]);
-        const addItem=(item, cantidad)=>{
-
-           /*cart.forEach((p)=>{
-              if( p.item.id==item.id && item<=0){
-                alert("Producto ya agregado");
-                
-                }else{  */
-                    const totalProduct=(item.precio * cantidad); 
-                const newItem={item, cantidad, totalProduct};
-                 
-                 console.log('se agrego al carrito:', newItem)
-                     setCart((prevState)=>[...prevState, newItem]);
-                 //}
-              //} )       
+   
+        const addItem=(item, cantidad)=>{  
+            const tproducto= cantidad* item.precio;
+          const newCart ={        
+              ...item, cant:cantidad, totalProduct:tproducto,
+          }
+        const isInCart =(idItem)=>{
+            return cart.some((prod)=> prod.id === idItem);
         };
+        if(!isInCart(item.id)){
+            
+            setCart([...cart, newCart]);
+        }else{
+            const newCarts = cart.map((cartItem)=>{
+                const sumTotal = cartItem.cant + cantidad;
+                const toproducto= sumTotal* cartItem.precio;
+                if(cartItem.id === item.id){
+                    return{...cartItem, cant:sumTotal, totalProduct:toproducto};
+                }else {
+                    return cartItem;
+                }
+            });
+            setCart(newCarts);
+            console.log(cart)
+        }
+      }     
+
+
         const items=cart.length;
         const removeItem=(id)=>{
-            setCart((prev)=> prev.filter((element)=> element.item.id !==id));
+            setCart((prev)=> prev.filter((element)=> element.id !==id));
         };     
         const clearAll=()=>{
             setCart([]);
@@ -41,3 +54,4 @@ export const CartProvider=({children})=>{
 }
 
 export const useCart =()=> useContext(CartContext);
+

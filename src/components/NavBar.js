@@ -17,12 +17,13 @@ function NavBar(){
                 <a className="boxNavegador">
                     <Link to="/">INICIO</Link>
                 </a>
-                <a className="boxNavegador">
-                    <Link to="/nosotros">NOSOTROS</Link>
-                </a> 
+
                 <a className="boxNavegador">
                     <Link to="/productos">PRODUCTOS</Link>
                 </a>
+                <a className="boxNavegador">
+                    <Link to="/nosotros">NOSOTROS</Link>
+                </a> 
 
                 <CartIcon/>
             </div>

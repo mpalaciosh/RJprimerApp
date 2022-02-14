@@ -24,7 +24,7 @@ return (
     <Routes>
       <Route path="/">
         <Route index element={<HomePage />} />
-        <Route path=":CategoriaId" element={<CategoriasPage />} />    
+        <Route path="category/:categoriaId" element={<CategoriasPage />} />    
           
         <Route path="login" element={<LoginPage />}/>
 

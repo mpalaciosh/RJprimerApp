@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/estilos.css";
 import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -18,16 +19,16 @@ function Lista(){
     return(
         <><h3>Categorias  </h3>
         <div className="lista">
-            <Categorias mytext="Niños" />
-            <Categorias mytext="Niñas" />
-            <Categorias mytext="Accesorios" />
-            <Categorias mytext="Materno" />
-
+        <Link to="/category/1"><Categorias mytext="Niños" /></Link>
+        <Link to="/category/2"><Categorias mytext="Niñas" /></Link>
+        <Link to="/category/3"><Categorias mytext="Accesorios" /></Link>
+        <Link to="/category/4"><Categorias mytext="Materno" /></Link>
         </div></>
     );
 }
 
 export default Lista;
+
 
 
 
