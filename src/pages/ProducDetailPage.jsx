@@ -25,13 +25,7 @@ const ProducDetailPage =()=>{
         })
         .finally(()=> setIsloading(false));
 
-        // const URL=`http://localhost:3001/PRODUCTOS/${productId}`;
-        // setIsloading(true);
-        // fetch(URL)
-        //     .then((res)=> res.json())
-        //     .then((json) => setProducto(json))
-        //     .catch((err)=> setError(err))
-        //     .finally(()=> setIsloading(false));
+  
     },[productId]);
 
     if(isloading) {return <p>Cargando Detalle.....</p>;

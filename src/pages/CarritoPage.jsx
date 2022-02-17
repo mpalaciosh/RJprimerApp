@@ -1,6 +1,8 @@
 import { useCart } from "../context/CartContext";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
+import LoginPage from "./LoginPage";
+import "../css/estilos.css";
 
 const CarritoPage=()=>{
     const {cart, removeItem, clearAll, items, totalPagar}=useCart();  
@@ -20,26 +22,30 @@ const CarritoPage=()=>{
         )
     }else
     return(
-        <div className="cajaGigante">
+        <div className="cajaFinal">
         <div className="padreCarrito"> 
-        <h1>Carrito de Compras</h1><br />
-        
-        {cart.map((compra)=>{      
-            return(
-            <div key={compra.id} className="boxCarrito">
+                        <h1>Carrito de Compras</h1><br />
                         
-                        <img className="imagCarrito" src={compra?.imag} alt={compra.nombre}/>
-                        <p>{compra.nombre}</p>
-                        <p>{compra.cant}</p>
-                        <p>S/.{compra.totalProduct}</p>
-                        <button onClick={() => removeItem(compra.id)}>Quitar producto</button>              
-            </div>
-            )
-        })}
-            <div> <p>Total a pagar S/.{totalPagar(cart)}</p> </div>
-            <br/><br/><button onClick={clearAll}>Borrar todo</button>
-            <br/><br/><button className="botonCarrito">Terminar la Compra</button>
-            </div> 
+                        {cart.map((compra)=>{      
+                            return(
+                            <div key={compra.id} className="boxCarrito">
+                                        
+                                        <img className="imagCarrito" src={compra?.imag} alt={compra.nombre}/>
+                                        <p>{compra.nombre}</p>
+                                        <p>{compra.cant}</p>
+                                        <p>S/.{compra.totalProduct}</p>
+                                        <button onClick={() => removeItem(compra.id)}>Quitar producto</button>              
+                            </div>
+                            )
+                        })}
+                            <div> <p>Total a pagar S/.{totalPagar(cart)}</p> 
+                            <button onClick={clearAll}>Borrar todo</button>
+                            </div>
+        </div>
+
+            <LoginPage/>
+            
+            
         </div>
     )}
 export default CarritoPage;
