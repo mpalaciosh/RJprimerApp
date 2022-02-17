@@ -17,7 +17,7 @@ class Categorias extends React.Component{
 }
 function Lista(){
     return(
-        <><h3>Categorias  </h3>
+        <>
         <div className="lista">
         <Link to="/category/1"><Categorias mytext="Niños" /></Link>
         <Link to="/category/2"><Categorias mytext="Niñas" /></Link>

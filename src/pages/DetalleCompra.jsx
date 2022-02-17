@@ -1,26 +1,50 @@
-import * as React from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getFirestore } from "../firebase";
+import "../css/estilos.css";
+
 
 
 
 const DetalleCompra =()=>{
     const {orderId}= useParams();
-    const [order, setOrder]=React.useState({});
+    const [order, setOrder]=useState({});
 
-    React.useEffect(()=>{
+    useEffect(()=>{
         const db= getFirestore();
-        db.collection("orders")
-        .doc(orderId)
-        .get()
-        .then((res)=> setOrder({id: res.id, ...res.data()}));
+        const ordenCollection=db.collection("orders");
+        const selectOrden = ordenCollection.doc(orderId)
+        selectOrden.get()
+        .then((res)=> setOrder({...res.data(),id: res.id }));
+        
     },[orderId]);
 
     return(
-        <div>
-            <h1>Gracias por su Compra, sr/sra. {order.buyer.name}</h1>
-            <p>Detalle de Compra</p>
-                                          
+        
+        <div className="comprar">
+            
+            <h1>Gracias por su Compra</h1>
+            <p>Cliente: {order?.buyer?.name} </p> <br/>
+            <p>Detalle de Compra</p> 
+
+           {console.log(order)}
+
+           {order?.items?.cart?.map((ord)=>{      
+               return(
+                    <div className="boxCarrito2">
+                   <img className="imagCarrito" src={ord.imag} alt={ord.nombre}/>
+                   <p>{ord.nombre}</p>
+                   <p>{ord.cant}</p>
+                   <p>S/.{ord.totalProduct}</p> 
+                   </div> 
+                    )
+           })}
+            
+            <p>Total a Pagar: S/ {order?.total} soles</p>
+            <p>Telefono: {order?.buyer?.telef}</p>
+            <p>Dirección: {order?.buyer?.direc}</p>   
+                            
+                                            
         </div>
     );
 };
@@ -44,4 +68,16 @@ export default DetalleCompra;
                         
                             <p>Total a Pagar: {order.total}</p>
                             <p>Telefono: {order.buyer.telef}</p>
-                            <p>Dirección: {order.buyer.direc}</p>     */
+                            <p>Dirección: {order.buyer.direc}</p>   
+                            
+                            
+                            
+
+
+
+                             
+                            
+                            */
+
+
+                            

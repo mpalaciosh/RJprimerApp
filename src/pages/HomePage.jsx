@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Categorias from "../components/ItemListContainer";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
-import LoginPage from "../pages/LoginPage";
+import portada from "../imagenes/portada1.png";
 
 
 const HomePage =()=>{
@@ -15,12 +15,13 @@ const HomePage =()=>{
     return(
         <div className="body">
             <div className="cajaGigante">
-            <h1>HomePage</h1>
+
             <Categorias/>
             <Outlet/>
-            <button className="botonCarrito" onClick={goToProductos}>Ir a ver los Produtos</button> <br />
-            <Link className="found" to="/login">Ingresar</Link> <br />
-            <Link className="found" to="/agregar">Agregar Producto</Link>
+            <button className="botonProductos" onClick={goToProductos}>Ir a ver los Produtos</button>
+            <div className="cajaPortada" ><img  className="imgPortada" src={portada} /> </div>
+          
+     
             
             </div>
         </div>
@@ -30,4 +31,6 @@ const HomePage =()=>{
 
 export default HomePage;
 
+/*  
+            <Link className="found" to="/agregar">Agregar Producto</Link>*/
 

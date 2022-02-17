@@ -51,13 +51,13 @@ text-align: center;
 }
 
 .lista{
-  border: 1px solid rgb(245, 238, 238);
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
   margin-left: 150px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 
 }
@@ -158,6 +158,7 @@ margin-top: 13px;
   font-size: 20px;
   font-weight: bold;
   color: blueviolet;
+  
 }
 .padreCarrito{
     text-align: right;
@@ -185,3 +186,52 @@ margin-top: 13px;
   flex-direction: row;
   justify-content: space-around;
 }
+.comprar{
+  
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  color: rgb(16, 16, 19);
+}
+.imagCarrito{
+  width: 50px;
+}
+
+.boxCarrito2{
+  display: flex;
+  justify-content:space-evenly;
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid rgb(5, 6, 10);
+  margin-right: auto;
+  margin-right: auto;
+ 
+  width: 500px;
+  align-content: center;
+  align-items: center;
+}
+.imgPortada{
+  width: 100%;
+  height: 70%;
+}
+
+.cajaPortada{
+  width: 100%;
+
+}
+
+.botonProductos{
+  background-color: black;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  color: blanchedalmond;
+  padding: 5px;
+  position: fixed;
+  margin-left: -100px;
+  margin-top: 420px;  
+  
+  
+  
+}
+

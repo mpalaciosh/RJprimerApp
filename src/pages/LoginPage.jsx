@@ -3,7 +3,7 @@ import * as React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { getFirestore } from "../firebase";
-import DetalleCompra from "./DetalleCompra";
+
 
 
 const LoginPage=()=>{
@@ -28,16 +28,12 @@ const LoginPage=()=>{
                             total:totalPagar(cart),
                     };
                     console.log(newOrder);
-                    console.log("Se envio el formulario");
                     const db = getFirestore()
                     db.collection('orders').add(newOrder)
-                    .then((res)=>{console.log('compra realizada', res.id)
-                        navigate(`/detalleCompra/${res.id}`)
+                    .then((res)=>{console.log("compra realizada", res.id)
+                        navigate(`/detaCompra/${res.id}`);
                        } )
-                    .catch((err)=>console.log('Hubo un error', err))
-                  
-
-                    
+                    .catch((err)=>console.log('Hubo un error', err));          
                 };
 return (
    <div>
