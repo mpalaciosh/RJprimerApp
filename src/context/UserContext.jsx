@@ -33,3 +33,9 @@ export const UserProvider =({children})=>{
 };
 
 export const useUsuario=()=> useContext(UserContext);
+
+
+//import {UserProvider } from './context/UserContext';
+//  </UserProvider>
+
+ //<UserProvider>

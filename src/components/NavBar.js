@@ -1,7 +1,7 @@
 import "../css/estilos.css";
 import { Link } from "react-router-dom";
 import Logokd from './CartWidget';
-import CartIcon from '../imagenes/icons/CartIcon';
+import CartIcon from './CartIcon';
 import { useNavigate } from "react-router-dom";
 
 function NavBar(){
@@ -14,17 +14,10 @@ function NavBar(){
     <nav> <h1 onClick={goToHome}>C & E Kids Store</h1> 
             <div className="navegador">
                 <Logokd/>
-                <a className="boxNavegador">
-                    <Link to="/">INICIO</Link>
-                </a>
-
-                <a className="boxNavegador">
-                    <Link to="/productos">PRODUCTOS</Link>
-                </a>
-                <a className="boxNavegador">
-                    <Link to="/nosotros">NOSOTROS</Link>
-                </a> 
-
+                
+                <Link  className="boxNavegador" to="/">INICIO</Link>
+                <Link className="boxNavegador" to="/productos">PRODUCTOS</Link>
+                <Link className="boxNavegador" to="/nosotros">NOSOTROS</Link>
                 <CartIcon/>
             </div>
     </nav>

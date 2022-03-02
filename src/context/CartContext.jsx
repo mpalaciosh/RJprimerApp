@@ -34,7 +34,14 @@ export const CartProvider=({children})=>{
       }     
 
 
-        const items=cart.length;
+        const items=(cart)=>{
+            let item=0;
+            cart.forEach((p) => {
+                item += p.cant;
+        });
+        return item;
+    }
+    
         const removeItem=(id)=>{
             setCart((prev)=> prev.filter((element)=> element.id !==id));
         };     
@@ -48,7 +55,14 @@ export const CartProvider=({children})=>{
             });
             return total;
         }
-    return <CartContext.Provider value={{cart, addItem, removeItem, clearAll, items,totalPagar}}>
+
+        //Vaciar carrito
+        const clearCart = () => {
+            setCart([]);
+            console.log("Carrito vaciado");
+        };
+
+    return <CartContext.Provider value={{cart, addItem, removeItem, clearAll, items,totalPagar, clearCart}}>
         {children}
     </CartContext.Provider>
 }

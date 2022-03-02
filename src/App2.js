@@ -9,17 +9,17 @@ import MisionPage from './pages/MisionPage';
 import ProducDetailPage from './pages/ProducDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
 import CategoriasPage from './pages/CategoriasPage';
-
 import { CartProvider } from './context/CartContext';
 import CarritoPage from './pages/CarritoPage';
-import AddProductPage from './pages/AddProducPage';
+
 import LoginPage from './pages/LoginPage';
 import DetalleCompra from './pages/DetalleCompra';
+import UbicanosPage from './pages/UbicanosPage';
 
 
 function App2(){
 return (
- //<UserProvider>
+
    <CartProvider>
   <BrowserRouter>
     <NavBar />
@@ -29,13 +29,13 @@ return (
         <Route path="category/:categoriaId" element={<CategoriasPage />} />    
           
         <Route path="login" element={<LoginPage/>}/>
-        <Route path="agregar" element={<AddProductPage />}/>
+       
         <Route path="detaCompra/:orderId" element={<DetalleCompra/>}/> 
 
         <Route path="nosotros" element={<NosotrosPage />}>
           <Route path="vision" element={<VisionPage />} />
           <Route path="mision" element={<MisionPage />} />
-          <Route path="login" element={<LoginPage/>} />
+          <Route path="ubicanos" element={<UbicanosPage/>} />
         </Route>
 
         <Route path="productos">
@@ -49,10 +49,9 @@ return (
     </Routes>
   </BrowserRouter>
   </CartProvider>
-//  </UserProvider>
+
 );
 }
 
 export default App2;
 
-//import {UserProvider } from './context/UserContext';

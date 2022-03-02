@@ -1,10 +1,10 @@
 import React from 'react';
 import { HiShoppingCart } from "react-icons/hi";
 import { useNavigate } from 'react-router-dom';
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../context/CartContext";
 
 const CartIcon = ()=>{
-    const {items}=useCart();
+    const {items, cart}=useCart();
     let navigate = useNavigate();
     const goToCarrito=()=>{
         navigate("/carrito");
@@ -13,7 +13,7 @@ const CartIcon = ()=>{
             <div>
             <HiShoppingCart className ='carticon' onClick={goToCarrito}/> 
             <div className='cantItems'>
-                <p>{items}</p>
+                <p>{items(cart)}</p>
             </div>
             </div>       
     )

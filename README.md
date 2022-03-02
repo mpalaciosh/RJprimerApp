@@ -1,26 +1,26 @@
-# Getting Started with Create React App
+# Primeros pasos con la aplicación Create React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue iniciado con [Create React App](https://github.com/mpalaciosh/RJprimerApp).
 
 ## Available Scripts
 
-In the project directory, you can run:
+En el directorio del proyecto, puede ejecutar:
+
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en modo desarrollador
+abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador
 
-### `npm run json-server`
-para correr la ruta del 
-Open [http://localhost:3001](http://localhost:3001/PRODUCTOS) donde esta la base de datos abrir otra terminal y ejecutar la instruccion
+
+La base de datos se encuentra en firestore, la ruta
+https://console.firebase.google.com/project/pagecyekids/overview?hl=es-419
+
+
 
 La aplicación es una tienda de ropa de niños y materno
 vamos a tener 3 paginas principales
-*Inicio
-*Nosotros 
-*Productos
+*Inicio (nos muestra para poder filtrar por categorias, o ir a ver todos los productos)
+*Nosotros  (informacion de mision, vision y ubicanos)
+*Productos (muestra los productos que se ofrecen, al hacer click al producto se va a informacion detallada del producto )
 
-En Inicio tendremos opcionesp para elegir categorias
-En Nosotros informacion de la empresa, productos y servicios, contactos
-En Productos catalogo de productos y opcion a Mas información

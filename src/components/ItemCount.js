@@ -4,26 +4,23 @@ import "../css/estilos.css";
 const ItemCount = ({stock, cont, setCont})=>{
 
     const incrementar = ()=>{
-        //cont<stock? setCont(cont+1): setCont(cont);
         if(cont < stock){
             setCont((prev) => prev+1)
-          }
+        }
     };
     const descontar=()=>{
-        //cont<=1? setCont(cont): setCont(cont-1);
         if(cont > 1){
             setCont((prev)=> prev-1)
-          }
+        }
     };
 
         return( 
             <div >
-                <div>
+                <div className="boxBarrContar"> 
                     <button onClick={descontar} className="botContar">-</button>
-                    <a>{cont}</a>
+                    <p className="parrafo">{cont}</p>
                     <button onClick={incrementar} className="botContar">+</button>
                 </div>
-               
             </div> 
             );
 

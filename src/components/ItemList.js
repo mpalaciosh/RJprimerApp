@@ -3,8 +3,6 @@ import "../css/estilos.css";
 import { getFirestore } from "../firebase";
 import Item from "./Item.js";
 
-
-//const URL = "http://localhost:3001/PRODUCTOS";
 function MostrarProducto() {
   const [productos, setProductos] = useState([]);
   const[isLoading, setIsloading]=useState(false);
@@ -27,13 +25,6 @@ function MostrarProducto() {
     };
     getDatafromFirestore();
   
-
-    //   setIsloading(true);
-    // fetch(URL)
-    // .then((respuesta)=> respuesta.json())
-    // .then((json) => setProductos(json))
-    // .catch((err) => setError(err))
-    // .finally(()=>setIsloading(false));
   }, []);
 
   if(isLoading){

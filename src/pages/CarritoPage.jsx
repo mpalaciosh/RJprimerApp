@@ -10,13 +10,13 @@ const CarritoPage=()=>{
     const goToProductos=()=>{
         navigate("/productos");
     };
-    if(items<=0){
+    if(items(cart)<=0){
         return( 
         <>
         <div className="cajaGigante">
             <p>Carrito de Compras</p>
             <p> Aun no has escogido productos para comprar </p>
-            <button className="botonCarrito" onClick={goToProductos}>Ir a ver los Produtos</button><br />
+            <button className="botonCarrito" onClick={goToProductos}>Ir a ver los Productos</button><br />
             </div>
             </>
         )
@@ -30,20 +30,21 @@ const CarritoPage=()=>{
                             return(
                             <div key={compra.id} className="boxCarrito">
                                         
-                                        <img className="imagCarrito" src={compra?.imag} alt={compra.nombre}/>
-                                        <p>{compra.nombre}</p>
-                                        <p>{compra.cant}</p>
-                                        <p>S/.{compra.totalProduct}</p>
-                                        <button onClick={() => removeItem(compra.id)}>Quitar producto</button>              
+                                        <div className="cajita"><img className="imagCarrito" src={compra?.imag} alt={compra.nombre}/></div>
+                                       <div className="cajita"> <p>{compra.nombre}</p></div>
+                                       <div className="cajita"><p>{compra.cant}</p> </div>
+                                       <div className="cajita"><p>S/.{compra.totalProduct}</p></div>
+                                        <div className="cajita"><button onClick={() => removeItem(compra.id)}>Quitar producto</button>  </div>            
                             </div>
                             )
                         })}
-                            <div> <p>Total a pagar S/.{totalPagar(cart)}</p> 
+                            <br /><div className="boxCarrito"> <p>Total a pagar S/.{totalPagar(cart)}</p> 
                             <button onClick={clearAll}>Borrar todo</button>
                             </div>
         </div>
 
             <LoginPage/>
+            
             
             
         </div>

@@ -23,18 +23,17 @@ const ProducDetailPage =()=>{
             if(!response.exists) console.log("El producto no existe");
             setProducto({...response.data(), id: response.id});
         })
+        .catch((err)=>setError(err))
         .finally(()=> setIsloading(false));
-
-  
     },[productId]);
 
     if(isloading) {return <p>Cargando Detalle.....</p>;
     }else if(error){
     return <p>Ha habido un error {error.message}</p>;
-  }else 
+    }else 
 return (
         <div>
-            <h1>Este es el detalle del producto num : {productId}</h1>
+            <br />
             <Detail key={producto.id} product={producto} />    
         </div>
         

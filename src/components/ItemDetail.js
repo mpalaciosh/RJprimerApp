@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import {  useState } from "react";
 import { useCart } from "../context/CartContext";
 
- //<img className="fotProduct" src={require('../../public/imagenes/'+ product.imag)} alt={product.nombre}/>
 const Detail =({product})=>{
     const [cont, setCont]= useState(1);
     const navigate = useNavigate();

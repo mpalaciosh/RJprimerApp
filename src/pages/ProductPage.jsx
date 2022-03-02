@@ -5,7 +5,7 @@ const ProductosPage =()=>{
     return(
         
         <div className="body">
-            <h1>ProductosPage</h1>
+            <h1>Nuestros Productos</h1>
             <Categorias/> <br />
             <MostrarProducto/>
         </div>

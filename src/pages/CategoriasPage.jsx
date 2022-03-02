@@ -14,14 +14,12 @@ const CategoriasPage =()=>{
 
     useEffect(() => {
       const db=getFirestore();
-
       let productCollection;
       if (categoriaId){
         productCollection = db.collection("PRODUCTOS").where('catId', '==', Number(categoriaId))
       } else {
         productCollection = db.collection("PRODUCTOS")
       }
-     
 
       
       const  getDatafromFirestore = async ()=>{
@@ -38,7 +36,8 @@ const CategoriasPage =()=>{
       };
       getDatafromFirestore();
     }, [categoriaId]);
-  
+
+
     if(isLoading){
       return <p>Cargando productos.....</p>;
     }else if(error){
@@ -49,8 +48,8 @@ const CategoriasPage =()=>{
         <div className="body">
             <Categorias/>
             <Outlet/>
-             <h1>Categoria {categoriaId} </h1> <br /> <br />
-             <div className="boxProductos">
+            <br />
+            <div className="boxProductos">
             {productos.map((produ) => (
             <Item key={produ.id} producto={produ} />
           ))}
